@@ -64,6 +64,7 @@ def export_all_cakes_to_html(cls, path='htmls/classCake.html'):
             f.write(content)
         f.write(template_footer)
 
+
 def export_this_cake_to_html(self, path='htmls/'):
     template = """
 <table border=1>
@@ -92,10 +93,10 @@ def export_this_cake_to_html(self, path='htmls/'):
         content = template.format(self.name, self.kind, self.taste, self.additives, self.filling)
         f.write(content)
 
+
 class Cake:
     known_types = ['cake', 'muffin', 'meringue', 'biscuit', 'eclair', 'christmas', 'pretzel', 'other']
     bakery_offer = []
-
 
     def __init__(self, name:str, kind:str, taste:str, additives:list, filling:str=None, gluten_free:bool=False, text:str=''):
         Cake.bakery_offer.append(self)

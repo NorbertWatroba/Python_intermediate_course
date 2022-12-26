@@ -1,5 +1,5 @@
 class Cake:
-    def __init__(self, name, kind, taste, additives:list=[], filling=None):
+    def __init__(self, name, kind, taste, additives: list=[], filling=None):
         self.name = name
         self.kind = kind
         self.taste = taste

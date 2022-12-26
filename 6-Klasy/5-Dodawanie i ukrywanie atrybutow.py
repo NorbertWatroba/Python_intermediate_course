@@ -2,7 +2,7 @@ class Cake:
     known_types = ['cake', 'muffin', 'meringue', 'biscuit', 'eclair', 'christmas', 'pretzel', 'other']
     bakery_offer = []
 
-    def __init__(self, name:str, kind:str, taste:str, additives:list, filling:str=None, gluten_free:bool=False):
+    def __init__(self, name: str, kind: str, taste: str, additives: list, filling: str = None, gluten_free: bool = False):
         self.name = name
         if kind in Cake.known_types:
             self.kind = kind
@@ -27,18 +27,16 @@ class Cake:
         print(f'| Gluten-free: {self.__gluten_free:<16}|')
         print(f'|{"-"*30}|')
 
-
     def set_filling(self, filling):
         self.filling = filling
 
-
-    def add_additives(self, additives:list):
+    def add_additives(self, additives: list):
         self.additives.extend(additives)
 
 
 cake1 = Cake('Vanilla Cake', 'cake', 'vanilla', ['chocolate', 'nuts'], 'cream', False)
 muffin1 = Cake('Chocolate Muffin', 'muffin', 'chocolate', ['chocolate'], None, False)
-meringue1 = Cake('Super Sweet Meringue', 'meringue', 'very sweet', [],None, True)
+meringue1 = Cake('Super Sweet Meringue', 'meringue', 'very sweet', [], None, True)
 cake04 = Cake('Cocoa waffle', 'waffle', 'cocoa', [], 'cocoa', False)
 
 
@@ -48,4 +46,3 @@ print(f'{dir(meringue1)=}\n')
 meringue1._Cake__gluten_free = False
 meringue1.show_info()
 print(f'{dir(meringue1)=}\n')
-

@@ -36,4 +36,3 @@ def delete_file(f_path):
 if __name__ == '__main__':
     create_file(r'createdFile.txt')
     delete_file(r'createdFile.txt')
-

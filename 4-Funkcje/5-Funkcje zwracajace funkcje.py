@@ -43,7 +43,8 @@ print(time_span_m(start, end))
 print(time_span_h(start, end))
 print(time_span_d(start, end))'''
 start = datetime(2022, 7, 4, 0, 0, 0)
-end = datetime.now()
 
 f = create_function(input('Function type: '))
+
+end = datetime.now()
 print(f(start, end))

@@ -9,6 +9,7 @@ class Cake:
             self.additives = additives
         self.filling = filling
 
+
 cake1 = Cake('Vanilla Cake', 'cake', 'vanilla', ['chocolate', 'nuts'], 'cream')
 muffin1 = Cake('Chocolate Muffin', 'muffin', 'chocolate', 'chocolate')
 meringue1 = Cake('Super Sweet Meringue', 'meringue', 'very sweet')

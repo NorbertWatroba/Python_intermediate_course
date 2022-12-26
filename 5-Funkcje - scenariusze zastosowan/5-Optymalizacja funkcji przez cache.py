@@ -1,6 +1,7 @@
 import functools
 from time import time, sleep
 
+
 @functools.lru_cache(100)
 def fib(n):
     sleep(0.1)
@@ -10,6 +11,7 @@ def fib(n):
         result = fib(n - 1) + fib(n - 2)
 
     return result
+
 
 start = time()
 print(f'fib: {fib(35)}')

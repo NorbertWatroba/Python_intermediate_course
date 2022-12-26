@@ -2,8 +2,7 @@ class Cake:
     known_types = ['cake', 'muffin', 'meringue', 'biscuit', 'eclair', 'christmas', 'pretzel', 'other']
     bakery_offer = []
 
-
-    def __init__(self, name:str, kind:str, taste:str, additives:list, filling:str=None, gluten_free:bool=False, text:str=''):
+    def __init__(self, name: str, kind: str, taste: str, additives: list, filling: str = None, gluten_free: bool = False, text: str = ''):
         self.name = name
         if kind in Cake.known_types:
             self.kind = kind
@@ -20,7 +19,6 @@ class Cake:
             self.__text = ''
             print(f'Cannot add text "{text}" to {self.name}')
 
-
     def show_info(self):
         print(f'''| {self.name.upper():29}|
 | Kind:        {self.kind:16}|
@@ -34,13 +32,11 @@ class Cake:
         print(f'| Gluten-free: {self.__gluten_free:<16}|')
         print(f'|{"-"*30}|')
 
-
     def set_filling(self, filling):
         self.filling = filling
 
-    def add_additives(self, additives:list):
+    def add_additives(self, additives: list):
         self.additives.extend(additives)
-
 
     def __get_text(self):
         return self.__text
@@ -53,9 +49,10 @@ class Cake:
 
     Text = property(__get_text, __set_text)
 
+
 cake1 = Cake('Vanilla Cake', 'cake', 'vanilla', ['chocolate', 'nuts'], 'cream', False, 'Happy Anniversary!')
 muffin1 = Cake('Chocolate Muffin', 'muffin', 'chocolate', ['chocolate'], None, False, 'wrong text')
-meringue1 = Cake('Super Sweet Meringue', 'meringue', 'very sweet', [],None, True, '')
+meringue1 = Cake('Super Sweet Meringue', 'meringue', 'very sweet', [], None, True, '')
 waffle1 = Cake('Cocoa waffle', 'waffle', 'cocoa', [], 'cocoa', False, 'Happy birthday!')
 
 for item in Cake.bakery_offer:
