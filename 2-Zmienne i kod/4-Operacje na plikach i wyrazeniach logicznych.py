@@ -9,7 +9,7 @@ def ilosc_slow(_path):
 
 
 if __name__ == '__main__':
-    path = r'/2-Zmienne i kod/plik.txt'
+    path = r'plik.txt'
     # =================================================== #
     if os.path.isfile(path):
         print(f'Ilość słów w pliku: {ilosc_slow(path)}')

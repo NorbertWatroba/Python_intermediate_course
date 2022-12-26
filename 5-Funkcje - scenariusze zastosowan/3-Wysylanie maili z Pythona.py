@@ -1,6 +1,6 @@
 from smtplib import SMTP_SSL
 
-to_email = ['wikwatmsg@gmail.com', 'norbert@watroba.net']
+to_email = ['example@example.com']
 mail_host = input('email host: ')
 user = input('email: ')
 password = input('password: ')

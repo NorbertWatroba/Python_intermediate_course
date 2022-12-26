@@ -13,7 +13,7 @@ def save_url_file(url, directory, file, msg):
         f.write(r.content)
 
 
-directory = r'C:\Users\Norbe\Desktop\Udemy\Python\Python dla średniozaawansowanych\5-Funkcje - scenariusze zastosowań'
+directory = r'.'
 msg = "Please wait: {}"
 save_url_to_dir = functools.partial(save_url_file, directory=directory, msg=msg)
 
