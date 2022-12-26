@@ -1,1 +1,1 @@
-# Python_intermidiate_course
+Kurs Udemy - Python dla średniozaawansowanych - Rafał Mobilo
