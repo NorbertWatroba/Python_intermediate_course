@@ -1,12 +1,13 @@
 import pickle
 import glob
 
+
 class Cake:
     known_types = ['cake', 'muffin', 'meringue', 'biscuit', 'eclair', 'christmas', 'pretzel', 'other']
     bakery_offer = []
 
-
-    def __init__(self, name:str, kind:str, taste:str, additives:list, filling:str=None, gluten_free:bool=False, text:str=''):
+    def __init__(self, name: str, kind: str, taste: str, additives: list[str], filling: str = None,
+                 gluten_free: bool = False, text: str = ''):
         Cake.bakery_offer.append(self)
         self.name = name
         if kind in Cake.known_types:
@@ -23,7 +24,6 @@ class Cake:
             self.__text = ''
             print(f'Cannot add text "{text}" to {self.name}')
 
-
     def show_info(self):
         print(f'''| {self.name.upper():29}|
 | Kind:        {self.kind:16}|
@@ -36,13 +36,12 @@ class Cake:
             print(f'| Filling:     {self.filling:16}|')
         print(f'| Gluten-free: {self.__gluten_free:<16}|')
         print(f'| Text:{"":24}|\n|{self.text:^30}|')
-        print(f'|{"-"*30}|')
-
+        print(f'|{"-" * 30}|')
 
     def set_filling(self, filling):
         self.filling = filling
 
-    def add_additives(self, additives:list):
+    def add_additives(self, additives: list):
         self.additives.extend(additives)
 
     @property
@@ -55,7 +54,6 @@ class Cake:
             self.__text = new_text
         else:
             print(f'Cannot add text "{new_text}" to {self.name}')
-
 
     def save_to_file(self, path):
         with open(path, "bw") as f:

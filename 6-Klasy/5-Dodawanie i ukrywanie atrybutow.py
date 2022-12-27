@@ -2,7 +2,8 @@ class Cake:
     known_types = ['cake', 'muffin', 'meringue', 'biscuit', 'eclair', 'christmas', 'pretzel', 'other']
     bakery_offer = []
 
-    def __init__(self, name: str, kind: str, taste: str, additives: list, filling: str = None, gluten_free: bool = False):
+    def __init__(self, name: str, kind: str, taste: str, additives: list, filling: str = None,
+                 gluten_free: bool = False):
         self.name = name
         if kind in Cake.known_types:
             self.kind = kind

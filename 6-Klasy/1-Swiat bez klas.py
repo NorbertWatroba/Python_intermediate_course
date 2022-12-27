@@ -1,4 +1,3 @@
-
 def show_cake_info(cake):
     print(f'{cake["taste"]} cake with {cake["glaze"]} glaze with text "{cake["text"]}" of {cake["weight"]} kg')
 
@@ -17,4 +16,3 @@ cakes = [cake_01, cake_02]
 
 for c in cakes:
     show_cake_info(c)
-
