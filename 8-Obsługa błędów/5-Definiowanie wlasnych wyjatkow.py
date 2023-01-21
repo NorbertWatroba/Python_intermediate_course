@@ -11,11 +11,13 @@ class TripException(Exception):
 
 
 class TripNameException(TripException):
-    pass
+    def __init__(self, text: str):
+        super().__init__(text, 'Name of the trip is missing. You need to name the trip somehow...')
 
 
 class TripDateException(TripException):
-    pass
+    def __init__(self, text: str):
+        super().__init__(text, 'The dates are incorrect. The starting date should be earlier than the ending date...')
 
 
 class Trip:
@@ -27,9 +29,9 @@ class Trip:
 
     def check_data(self):
         if len(self.title) == 0:
-            raise TripNameException("Title is empty!", 'You need to name trip somehow')
+            raise TripNameException('Name error')
         if self.start > self.end:
-            raise TripDateException("Start date is later than end date!", 'start date has to be before end date')
+            raise TripDateException('Date error')
 
     @classmethod
     def publish_offer(cls, trips):
