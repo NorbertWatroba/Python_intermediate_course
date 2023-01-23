@@ -23,7 +23,7 @@ customers = ['Customer {}'.format(i) for i in range(1, 6)]
 combinations = Combinations(products, promotions, customers)
 '''
 for i in range(30):
-    print(combinations.__getitem__(i))
+    print(combinations[i])
 '''
 it_combinations = iter(combinations)
 for _ in range(30):
